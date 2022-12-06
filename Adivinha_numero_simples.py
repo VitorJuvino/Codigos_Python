@@ -1,17 +1,26 @@
+from random import randint
 
-contador = 0
-
+cont1 = 0
+cont2 = 4
 while True:
+
+    random = randint(1, 10)
+    cont1 = cont1 + 1
+    cont2 = cont2 - 1
+    n = int(input(f'Digite um numero entre 1 e 10 (Voce tem {cont2} chances): '))
+
+    if n == random:
+        print("=============")
+        print("Você acertou!")
+        print("=============")
+        break
     
-    lista = [7]
-    contador = contador + 1
-    n = int(input('Digite um numero entre 1 e 10 (Voce tem 3 chances): '))
-    if contador == 3:
+    elif cont1 == 3:
         break
 
-    if n in lista:
-        break   
-   
-print(f'Total de tentativas: {contador}')
 
-print(f'Numero secreto é: {lista}')
+   
+print(f'Total de tentativas: {cont1}')
+
+print(f'Numero secreto é: {random}')
+
